@@ -60,6 +60,46 @@
             </div>
         </div>
     </nav>
+    <?php
+        // Connect to the database
+        $servername= "localhost";
+        $username= "root";
+        $password= "";
+        $database= "library";
+
+        //create a connection
+        $conn = mysqli_connect($servername, $username, $password, $database );
+        if(!$conn){
+            die("Sorry we fail to connect.". mysqli_connect_error());
+        }
+        
+        //Connecting the table
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $email=$_POST['email'];
+            $name=$_POST['name'];
+            $comment=$_POST['comment'];
+            $feed_type=$_POST['feedback_type'];
+            
+        }
+        $sql="INSERT INTO `feedback` (`name`, `email`, `comments`, `feedback_type`)
+         VALUES ('$name', '$email', '$comment', '$feed_type');";
+        $result=mysqli_query($conn,$sql);
+        if($result){
+            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> Your entry is sucessfully submitted.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>';
+            
+        }
+        else{
+
+            echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Error!</strong> Password does not match.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>';
+        }
+  
+    ?>
     <!-- Main content  -->
     <div class="container mt-2 shadow-lg feedback-container">
         <div class="row">
@@ -67,38 +107,39 @@
                 <h2 class="text-black">Feedback Form</h2>
                 <p class="text-black">We welcome your comments and suggestion!</p>
                 <hr>
-                <form>
+                <form action="/project/project_file/Library_project/partials/feedbackform.php" method="post">
                     <div class="text-black">
                         <h5>What kind of comment would you like to send?</h5>
                         <div class="row">
                             <div class="col-md-4">
-                                <input type="radio" name="feedback" id="feed1" class= "pointer" value="suggestion">&nbsp;&nbsp;<label for="feed1" >Suggestion</label>
+                                <input type="radio" name="feedback_type" id="feed1" class= "pointer" value="suggestion">&nbsp;&nbsp;<label for="feed1" >Suggestion</label>
                             </div>
                             <div class="col-md-4">
-                                <input type="radio" name="feedback" id="feed2" class="pointer" value="complaint">&nbsp;&nbsp;<label for="feed2">Complaint</label>
+                                <input type="radio" name="feedback_type" id="feed2" class="pointer" value="complaint">&nbsp;&nbsp;<label for="feed2">Complaint</label>
                             </div>
                             <div class="col-md-4">
-                                <input type="radio" name="feedback" id="feed3" class= "pointer" value="problem">&nbsp;&nbsp;<label for="feed3">Problem</label>
+                                <input type="radio" name="feedback_type" id="feed3" class= "pointer" value="problem">&nbsp;&nbsp;<label for="feed3">Problem</label>
                             </div>
                             <div class="col-md-4">
-                                <input type="radio" name="feedback" id="feed4" class="pointer" value="praise">&nbsp;&nbsp;<label for="feed4">Praise</label>
+                                <input type="radio" name="feedback_type" id="feed4" class="pointer" value="praise">&nbsp;&nbsp;<label for="feed4">Praise</label>
                             </div>
                         </div>
                     </div>
                     
                     <div class="mb-3 text-black">
                         <label for="formGroupExampleInput" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your full name." required="">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter your full name." required="">
                     </div>
-                    <div class="mb-3 text-black">
+                    <div class="mb-3 text-black"> 
+                
                         <label for="formGroupExampleInput2" class="form-label">Email</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your e-mail address. " required="">
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter your e-mail address. " required="">
                     </div>
                     <div class="form-group mb-2 text-black">
                         <label class="form-label">Describe Feedback:</label>
                     </div>
                     <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required=""></textarea>
+                        <textarea class="form-control" placeholder="Leave a comment here" name="comment" id="floatingTextarea" required=""></textarea>
                         <label for="floatingTextarea">Comment</label>
                     </div>
                     

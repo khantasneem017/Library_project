@@ -34,14 +34,13 @@ body{
     background-color: #b87e9a !important;
     color: #fff !important;
 }
-.feedback-container {
+.feedback-container{
     background-color: #EFE6EA;
     width: 60% !important;
     border-radius: 5%;
 }
 .row{
     padding: 15px;
-
 }
 .card-color{
     background-color: #EFE6EA;
