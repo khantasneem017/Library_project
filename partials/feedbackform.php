@@ -78,10 +78,10 @@
             $email=$_POST['email'];
             $name=$_POST['name'];
             $comment=$_POST['comment'];
-            $feed_type=$_POST['feedback_type'];
+            $feed_type=$_POST['feed_type'];
             
         }
-        $sql="INSERT INTO `feedback` (`name`, `email`, `comments`, `feedback_type`)
+        $sql="INSERT INTO `feedback` (`name`, `email`, `comments`, `feed_type`)
          VALUES ('$name', '$email', '$comment', '$feed_type');";
         $result=mysqli_query($conn,$sql);
         if($result){
@@ -112,16 +112,16 @@
                         <h5>What kind of comment would you like to send?</h5>
                         <div class="row">
                             <div class="col-md-4">
-                                <input type="radio" name="feedback_type" id="feed1" class= "pointer" value="suggestion">&nbsp;&nbsp;<label for="feed1" >Suggestion</label>
+                                <input type="radio" name="feed_type" id="feed1" class= "pointer" value="suggestion">&nbsp;&nbsp;<label for="feed1" >Suggestion</label>
                             </div>
                             <div class="col-md-4">
-                                <input type="radio" name="feedback_type" id="feed2" class="pointer" value="complaint">&nbsp;&nbsp;<label for="feed2">Complaint</label>
+                                <input type="radio" name="feed_type" id="feed2" class="pointer" value="complaint">&nbsp;&nbsp;<label for="feed2">Complaint</label>
                             </div>
                             <div class="col-md-4">
-                                <input type="radio" name="feedback_type" id="feed3" class= "pointer" value="problem">&nbsp;&nbsp;<label for="feed3">Problem</label>
+                                <input type="radio" name="feed_type" id="feed3" class= "pointer" value="problem">&nbsp;&nbsp;<label for="feed3">Problem</label>
                             </div>
                             <div class="col-md-4">
-                                <input type="radio" name="feedback_type" id="feed4" class="pointer" value="praise">&nbsp;&nbsp;<label for="feed4">Praise</label>
+                                <input type="radio" name="feed_type" id="feed4" class="pointer" value="praise">&nbsp;&nbsp;<label for="feed4">Praise</label>
                             </div>
                         </div>
                     </div>
