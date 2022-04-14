@@ -87,10 +87,7 @@
         if($pass==$conpass){
     
             if($result){
-                echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-          <strong>Success!</strong> Your entry is sucessfully submitted.
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>';
+                echo 'successful';
             }
             else{
                 echo "The record was not successfully inserted";
