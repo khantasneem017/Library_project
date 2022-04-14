@@ -71,40 +71,40 @@
         die("Sorry we fail to connect.". mysqli_connect_error());
     }
     else{
-        echo "Connection was succesfull";
-    }
-    //Connecting the table
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $email=$_POST['email-id'];
-        $fname=$_POST['first_name'];
-        $lname=$_POST['last_name'];
-        $pass=$_POST['password'];  
-        $phone=$_POST['phone'];
-        $conpass=$_POST['cpassword'];
-    }
-    $sql="INSERT INTO `user` (`password`, `first_name`, `last_name`, `phone`, `signup_date`, `email_id`) 
-    VALUES ('$pass','$fname', '$lname', '$phone', current_timestamp(), '$email');";
-    $result=mysqli_query($conn,$sql);
-    if($pass==$conpass){
-
-        if($result){
-            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-      <strong>Success!</strong> Your entry is sucessfully submitted.
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
+        //Connecting the table
+        
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $email=$_POST['email-id'];
+            $fname=$_POST['first_name'];
+            $lname=$_POST['last_name'];
+            $pass=$_POST['password'];  
+            $phone=$_POST['phone'];
+            $conpass=$_POST['cpassword'];
+        }
+        $sql="INSERT INTO `user` (`password`, `first_name`, `last_name`, `phone`, `signup_date`, `email_id`) 
+        VALUES ('$pass','$fname', '$lname', '$phone', current_timestamp(), '$email');";
+        $result=mysqli_query($conn,$sql);
+        if($pass==$conpass){
+    
+            if($result){
+                echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>Success!</strong> Your entry is sucessfully submitted.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>';
+            }
+            else{
+                echo "The record was not successfully inserted";
+            }
         }
         else{
-            echo "The record was not successfully inserted";
+    
+            echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Error!</strong> Password does not match.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>';
         }
+      
     }
-    else{
-
-        echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Error!</strong> Password does not match.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>';
-    }
-  
     ?>
 
     <!-- main content -->
