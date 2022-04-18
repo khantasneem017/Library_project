@@ -15,11 +15,11 @@
 
 <body>
     <!-- Nav Bar-->
-<nav class="navbar navbar-expand-lg navbar-dark bglavender">
+    <nav class="navbar navbar-expand-lg navbar-dark bglavender">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Let's Read</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -56,9 +56,10 @@
                     <button class="btn animated-btn" type="submit">Search</button>
                 </form>
                 <div class="mx-2">
+                    <script scr="js/signup.js"></script>
                     <button class="btn btn-primary"  data-bs-target="#login">Login</button>
-                    <button class="btn btn-primary"  data-bs-target="#signup">SignUp</button>
-
+                    <button class="btn btn-primary"  data-bs-target="#signup" id="sign_up_btn" )>SignUp</button>
+                    
                 </div>
             </div>
         </div>
