@@ -22,6 +22,18 @@
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
 }
+.bglavender{
+  background-color: #75485E;
+}
+.animated-btn{
+  background-color: #D0B3C2 !important;
+  border: #D0B3C2;
+  transition: all 0.4s ease-in;
+}
+.animated-btn:hover{
+  background-color: #b87e9a !important;
+  color: #fff !important;
+}
 .content {
   position: absolute;
   top: 50%;

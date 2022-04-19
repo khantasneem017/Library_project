@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `books` (
   `book_id` int(25) NOT NULL,
-  `book_name` varchar(255) NOT NULL,
-  `author` varchar(255) NOT NULL,
-  `publisher` varchar(255) NOT NULL,
+  `book_name` varchar(30) NOT NULL,
+  `author` varchar(30) NOT NULL,
+  `publisher` varchar(30) NOT NULL,
   `publishing_date` year(4) NOT NULL,
   `sub_id` int(25) NOT NULL,
   `cat_id` int(25) NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE `books` (
 
 CREATE TABLE `catagories` (
   `cat_id` int(25) NOT NULL,
-  `cat_name` varchar(255) NOT NULL
+  `cat_name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -72,7 +72,7 @@ CREATE TABLE `comment` (
 
 CREATE TABLE `sub_catagory` (
   `sub_id` int(25) NOT NULL,
-  `sub_name` varchar(255) NOT NULL
+  `sub_name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -83,7 +83,7 @@ CREATE TABLE `sub_catagory` (
 
 CREATE TABLE `user` (
   `user_id` int(25) NOT NULL,
-  `password` varchar(255) NOT NULL,
+  `password` varchar(30) NOT NULL,
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
   `phone` int(25) NOT NULL,
