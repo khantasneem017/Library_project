@@ -29,7 +29,7 @@
                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about.php">About</a>
+                        <a class="nav-link" href="partials/about.php">About</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -57,8 +57,8 @@
                 </form>
                 <div class="mx-2">
                     <button class="btn btn-primary"  data-bs-target="#login">Login</button>
-                    <button class="btn btn-primary"  data-bs-target="#signup">SignUp</button>
-
+                    <button class="btn btn-primary"  data-bs-target="#signup" onclick= "window.location.href='http://localhost/project/project_file/Library_project/partials/signup.php'">SignUp</button>
+                    
                 </div>
             </div>
         </div>
