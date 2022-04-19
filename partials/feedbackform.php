@@ -80,23 +80,23 @@
             $comment=$_POST['comment'];
             $feed_type=$_POST['feedback_type'];
             
-        }
-        $sql="INSERT INTO `feedback` (`name`, `email`, `comments`, `feedback_type`)
-         VALUES ('$name', '$email', '$comment', '$feed_type');";
-        $result=mysqli_query($conn,$sql);
-        if($result){
-            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Success!</strong> Your entry is sucessfully submitted.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>';
-            
-        }
-        else{
-
-            echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Error!</strong> Password does not match.
+            $sql="INSERT INTO `feedback` (`name`, `email`, `comments`, `feedback_type`)
+             VALUES ('$name', '$email', '$comment', '$feed_type');";
+            $result=mysqli_query($conn,$sql);
+            if($result){
+                echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> Your entry is sucessfully submitted.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>';
+                
+            }
+            else{
+    
+                echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Error!</strong> Password does not match.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>';
+            }
         }
   
     ?>
