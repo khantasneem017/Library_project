@@ -1,21 +1,22 @@
-
+<!-- book details -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title> Login Form</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../style/style1.css">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="../style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Book</title>
 </head>
 <body>
- <!-- Nav bar -->
-  <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bglavender">
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+     <!-- Nav bar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bglavender">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Let's Read</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -32,7 +33,7 @@
                         <a class="nav-link" href="/about.html">About</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Categories
                         </a>
@@ -45,8 +46,8 @@
                             <li><a class="dropdown-item" href="/categories.html">Something else here</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="feedbackform.php">Feedback</a>
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="feedbackform.php">Feedback</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -56,36 +57,27 @@
             </div>
         </div>
     </nav>
-  </div>
- 
-<div class="bg-img">
-  
-  <div class="content">
-    <header>Login</header>
-    <form action="#">
-      <div class="field">
-        <span class="fa fa-user"></span>
-        <input type="text" required placeholder="Email or Phone">
-      </div>
-      <div class="field space">
-        <span class="fa fa-lock"></span>
-        <input type="password" class="pass-key" required placeholder="Password">
-        <span class="show"></span>
-      </div>
-      <div class="pass">
-        <a href="#">Forgot Password?</a>
-      </div>
-      <div class="field">
-        <input type="submit" value="LOGIN">
-      </div>
-    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-    </form>
-    <div class="signup">Don't have an account?
-      <a href="#">Signup Now</a>
+    <div class="container mt-2 shadow-lg">
+        <h2>Details</h2>
+        <!-- <div class="container">
+            <img src="../assets/english.jpg" alt="">
+        </div> -->
+        <div class="card" style="width: 18rem;">
+            <img src="../assets/english.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Objective General English</h5>
+                <p class="card-text"></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Read</a>
+                <a href="#" class="card-link">Download</a>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
-

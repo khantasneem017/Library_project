@@ -15,7 +15,7 @@
 
 <body>
     <!-- Nav Bar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bglavender">
+<nav class="navbar navbar-expand-lg navbar-dark bglavender">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Let's Read</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -29,7 +29,7 @@
                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about.php">About</a>
+                        <a class="nav-link" href="partials/about.php">About</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -56,9 +56,8 @@
                     <button class="btn animated-btn" type="submit">Search</button>
                 </form>
                 <div class="mx-2">
-                    <script scr="js/signup.js"></script>
                     <button class="btn btn-primary"  data-bs-target="#login">Login</button>
-                    <button class="btn btn-primary"  data-bs-target="#signup" id="sign_up_btn" )>SignUp</button>
+                    <button class="btn btn-primary"  data-bs-target="#signup" onclick= "window.location.href='http://localhost/project/project_file/Library_project/partials/signup.php'">SignUp</button>
                     
                 </div>
             </div>
