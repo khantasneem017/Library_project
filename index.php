@@ -9,24 +9,24 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style/style.css">
     <title>Welcome to Online Library</title>
 </head>
 
 <body>
-    <!-- Our code starts here -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bglavender">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Let's Read</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/about.php">About</a>
@@ -37,7 +37,8 @@
                             Categories
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item dropdown-toggle" href="/categories.php" data-bs-toggle="dropdown" aria-expanded="false">Educational</a>
+                            <li><a class="dropdown-item dropdown-toggle" href="/categories.php" data-bs-toggle="dropdown"
+                             aria-expanded="false">Educational</a>
                           
                             </li>
                             <li><a class="dropdown-item" href="/categories.php">Story</a></li>
@@ -52,16 +53,19 @@
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn animated-btn" type="submit">Search</button>
                 </form>
                 <div class="mx-2">
-                    <button class="btn btn-success"  data-bs-target="#login">Login</button>
-                    <button class="btn btn-success"  data-bs-target="#signup">SignUp</button>
-
+                    <script scr="js/signup.js"></script>
+                    <button class="btn btn-primary"  data-bs-target="#login">Login</button>
+                    <button class="btn btn-primary"  data-bs-target="#signup" id="sign_up_btn" )>SignUp</button>
+                    
                 </div>
             </div>
         </div>
     </nav>
+    <!-- Our code starts here -->
+   
 
         <!-- Carousel starts here -->
     
@@ -118,7 +122,7 @@
         <div class="row mb-2">
             <div class="col-md-6">
                 <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative card-color">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-primary">#book1</strong>
                         <h3 class="mb-0">Book 1</h3>
@@ -138,7 +142,7 @@
             
             <div class="col-md-6">
                 <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative card-color">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-warning">#book2</strong>
                         <h3 class="mb-0">Book 2</h3>
@@ -157,7 +161,7 @@
         <div class="row mb-2">
             <div class="col-md-6">
                 <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative card-color">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-danger">#book3</strong>
                         <h3 class="mb-0">book 3</h3>
@@ -174,7 +178,7 @@
             </div>
             <div class="col-md-6">
                 <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative card-color">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-danger">#book3</strong>
                         <h3 class="mb-0">book 3</h3>
@@ -190,7 +194,7 @@
             </div>
             <div class="col-md-6">
                 <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative card-color">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-danger">#book3</strong>
                         <h3 class="mb-0">book 3</h3>
@@ -206,7 +210,7 @@
             </div>
             <div class="col-md-6">
                 <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative card-color">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-danger">#book3</strong>
                         <h3 class="mb-0">book 3</h3>
@@ -222,7 +226,7 @@
             </div>
             <div class="col-md-6">
                 <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative card-color">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-danger">#book3</strong>
                         <h3 class="mb-0">book 3</h3>
@@ -238,7 +242,7 @@
             </div>
             <div class="col-md-6">
                 <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative card-color">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-danger">#book3</strong>
                         <h3 class="mb-0">book 3</h3>
@@ -254,7 +258,7 @@
             </div>
             <div class="col-md-6">
                 <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative card-color">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-danger">#book3</strong>
                         <h3 class="mb-0">book 3</h3>
@@ -270,7 +274,7 @@
             </div>
             <div class="col-md-6">
                 <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative card-color">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-danger">#book3</strong>
                         <h3 class="mb-0">book 3</h3>
@@ -286,7 +290,7 @@
             </div>
             <div class="col-md-6">
                 <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative card-color">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-danger">#book3</strong>
                         <h3 class="mb-0">book 3</h3>
@@ -303,7 +307,7 @@
             
             <div class="col-md-6">
                 <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative card-color">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-success">#book4</strong>
                         <h3 class="mb-0">book 4</h3>
@@ -322,7 +326,7 @@
     
     <footer class="container">
         <p class="float-end"><a href="#">Back to top</a></p>
-        <p>© 2022–2023 Let's Read, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        <p>© 2022 Let's Read, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
       </footer>
 
 
